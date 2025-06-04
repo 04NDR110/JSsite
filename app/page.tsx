@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Head from 'next/head';
-
+import Image from 'next/image'; // Теперь будем использовать <Image> вместо <img>
+// import '../styles/style.css'; // Раскомментируй, если файл существует
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <header>
         <h1>Баскетбольні кросівки 2023</h1>
         <h2>Все, що потрібно знати про найкрутіші кросівки на цій планеті</h2>
@@ -17,8 +18,8 @@ export default function Home() {
 
       <main>
         <section>
-          <h3>Поганe спортивне взуття - це як їжа низької якості.</h3>
-          <h3>Після покупки вас чекає суцільне розчарування i ризик завдати шкоди здоров'ю.</h3>
+          <h3>Погане спортивне взуття - це як їжа низької якості.</h3>
+          <h3>Після покупки вас чекає суцільне розчарування i ризик завдати шкоди здоров&apos;ю.</h3>
           <h3>
             Тому, якщо ви збираєтеся купити кросівки, краще трохи почекати i зробити вибір на користь однієї, але
             якісної пари. Сьогодні поговоримо про переваги спортивного взуття кращих брендів, які відомі людству.
@@ -27,10 +28,10 @@ export default function Home() {
 
         <section>
           <h3><a href="https://uk.wikipedia.org/wiki/Nike" target="_blank">Взуття Nike</a></h3>
-          <img src="/images/2.jpg" width="280" height="200" alt="Nike" />
+          <Image src="/images/2.jpg" width={280} height={200} alt="Nike" />
           <p>
             Високі ціни i також висока якість. Підошва працює на системі амортизації повітря, яку не вдалося
-            повторити жодному конкуренту. По краях перебувають повітряні подушки - вони i виконують роль
+            повторити жодному конкуренту. По краях перебувають повітряні подушки — вони i виконують роль
             амортизаторів. Якщо ви вирішите замовити через інтернет спортивне взуття цього бренду, то ніколи не
             пошкодуєте про зроблений вибір.
           </p>
@@ -41,16 +42,13 @@ export default function Home() {
 
         <section>
           <h3>
-            <a
-              href="https://imotion.com.ua/obuv-dlya-igryi-v-basketbol-adidas-vsegda-super-rezultat/"
-              target="_blank"
-            >
+            <a href="https://imotion.com.ua/obuv-dlya-igryi-v-basketbol-adidas-vsegda-super-rezultat/" target="_blank">
               Взуття Adidas
             </a>
           </h3>
-          <img src="/images/5.jpg" width="280" height="200" alt="Adidas" />
+          <Image src="/images/5.jpg" width={280} height={200} alt="Adidas" />
           <p>
-            Найновіші розробки компанії Adidas щодо баскетбольного взуття часто пов'язані з іменами відомих
+            Найновіші розробки компанії Adidas щодо баскетбольного взуття часто пов&apos;язані з іменами відомих
             баскетболістів. В «іменних» кросівках вони вигравали свої найкращі матчі і щоразу дивували фанатів
             новими перемогами.
           </p>
@@ -65,7 +63,7 @@ export default function Home() {
               Взуття Jordan
             </a>
           </h3>
-          <img src="/images/6.jpg" width="280" height="200" alt="Jordan" />
+          <Image src="/images/6.jpg" width={280} height={200} alt="Jordan" />
           <p>
             Варто відзначити, що взуття лінійки Jordan створювали застосовуючи найкращі технологічні можливості
             компанії.
@@ -77,9 +75,9 @@ export default function Home() {
 
         <section>
           <h3><a href="https://us.puma.com/us/en/lamelo-ball" target="_blank">Взуття Puma</a></h3>
-          <img src="/images/7.jpg" width="280" height="200" alt="Puma" />
+          <Image src="/images/7.jpg" width={280} height={200} alt="Puma" />
           <p>
-            За м'якість та чуйність відповідає технологія Nitro Foam. Кругові пунктирні лінії на передній частині
+            За м&apos;якість та чуйність відповідає технологія Nitro Foam. Кругові пунктирні лінії на передній частині
             підмітки та ромбики на задній відмінно чіпляють будь-яке покриття.
           </p>
         </section>
