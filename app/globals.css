@@ -1,26 +1,278 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* === Base Styles === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('/images/fone9.jpg');
+  margin: 0;
+  padding: 0;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #444;
+}
+
+/* === Typography === */
+h1, h2, h3 {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+h3 {
+  color: pink;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.3em;
+  margin-top: 0.1em;
+  margin-bottom: 0;
+  color: #E7E393;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+/* === Lists and Links === */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* === Header === */
+header {
+  padding: 50px 0;
+  background-color: #F26419;
+}
+
+/* === Navigation === */
+nav {
+  background-color: #F26419;
+  border-color: #2F4858;
+  min-height: 64px;
+}
+
+nav li {
+  float: left;
+  width: 100px;
+}
+
+nav a {
+  display: block;
+  color: #F26419;
+  line-height: 4em;
+  font-weight: bold;
+  text-align: center;
+}
+
+nav li a:hover {
+  color: #E7E393;
+  background-color: #F4C95D;
+}
+
+/* === Wrapper Block === */
+.wrap {
+  position: relative;
+  margin: 50px auto;
+  text-align: center;
+  width: 320px;
+  height: 370px;
+  background: white;
+  padding: 30px 40px;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.wrap::before,
+.wrap::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border: 1px solid rgba(0, 0, 0, .1);
+  background: white;
+}
+
+.wrap::before {
+  top: 5px;
+  left: -5px;
+  z-index: -1;
+}
+
+.wrap::after {
+  top: 10px;
+  left: -10px;
+  z-index: -2;
+}
+
+/* === Category Span === */
+.cat span {
+  font-family: 'Comfortaa', cursive;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ff6f5a;
+  font-weight: bold;
+}
+
+/* === Buttons === */
+.more-button {
+  font-family: 'Comfortaa', cursive;
+  color: #333;
+  font-size: 11px;
+  padding-bottom: 8px;
+  display: inline-block;
+  margin: 35px 0 20px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s linear;
+}
+
+.more-button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 0;
+  height: 1px;
+  width: 40px;
+  background: #333;
+  transition: 0.3s linear;
+}
+
+.more-button:hover {
+  color: #ff6f5a;
+}
+
+.more-button:hover::before {
+  background: #ff6f5a;
+}
+
+/* === Footer === */
+footer {
+  background-color: #CD5700;
+  color: black;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+/* === Images === */
+.img {
+  width: 200px;
+}
+
+/* === Layout Helpers === */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* === Multimedia Section === */
+.multimedia {
+  overflow: auto;
+}
+
+.multimedia-video {
+  display: inline-block;
+  float: left;
+  padding: 0 5px;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+/* === Social Icons === */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.social-icons > li {
+  margin: 0 0.25rem;
+}
+
+.social-icons a {
+  position: relative;
+  background-color: #eee;
+  display: block;
+  user-select: none;
+  transition: background-color 0.3s ease-in-out;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+}
+
+.social-icons a:hover {
+  background-color: #e0e0e0;
+}
+
+.social-icons a::before {
+  content: "";
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  left: 0.65rem;
+  top: 0.65rem;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.social-icons .social-icon-instagram::before {
+  background-image: url('/images/insta.jpg');
+}
+
+.social-icons .social-icon-tiktok::before {
+  background-image: url('/images/tiktok.jpg');
+}
+
+.social-icons .social-icon-telegram::before {
+  background-image: url('/images/telegram.jpg');
+}
+
+.social-icons .social-icon-youtube::before {
+  background-image: url('/images/youtube.jpg');
+}
+
+/* === Video Embeds === */
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
 }

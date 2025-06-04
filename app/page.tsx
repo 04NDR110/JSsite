@@ -1,103 +1,116 @@
 import Image from "next/image";
+import Head from 'next/head';
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <Head>
+        <title>Баскетбольне взуття</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <header>
+        <h1>Баскетбольні кросівки 2023</h1>
+        <h2>Все, що потрібно знати про найкрутіші кросівки на цій планеті</h2>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main>
+        <section>
+          <h3>Поганe спортивне взуття - це як їжа низької якості.</h3>
+          <h3>Після покупки вас чекає суцільне розчарування i ризик завдати шкоди здоров'ю.</h3>
+          <h3>
+            Тому, якщо ви збираєтеся купити кросівки, краще трохи почекати i зробити вибір на користь однієї, але
+            якісної пари. Сьогодні поговоримо про переваги спортивного взуття кращих брендів, які відомі людству.
+          </h3>
+        </section>
+
+        <section>
+          <h3><a href="https://uk.wikipedia.org/wiki/Nike" target="_blank">Взуття Nike</a></h3>
+          <img src="/images/2.jpg" width="280" height="200" alt="Nike" />
+          <p>
+            Високі ціни i також висока якість. Підошва працює на системі амортизації повітря, яку не вдалося
+            повторити жодному конкуренту. По краях перебувають повітряні подушки - вони i виконують роль
+            амортизаторів. Якщо ви вирішите замовити через інтернет спортивне взуття цього бренду, то ніколи не
+            пошкодуєте про зроблений вибір.
+          </p>
+          <video width="540" height="380" controls poster="/images/1.jpg">
+            <source src="/video.mp4" type="video/mp4" />
+          </video>
+        </section>
+
+        <section>
+          <h3>
+            <a
+              href="https://imotion.com.ua/obuv-dlya-igryi-v-basketbol-adidas-vsegda-super-rezultat/"
+              target="_blank"
+            >
+              Взуття Adidas
+            </a>
+          </h3>
+          <img src="/images/5.jpg" width="280" height="200" alt="Adidas" />
+          <p>
+            Найновіші розробки компанії Adidas щодо баскетбольного взуття часто пов'язані з іменами відомих
+            баскетболістів. В «іменних» кросівках вони вигравали свої найкращі матчі і щоразу дивували фанатів
+            новими перемогами.
+          </p>
+          <video width="540" height="380" controls poster="/images/3.jpg">
+            <source src="/video2.mp4" type="video/mp4" />
+          </video>
+        </section>
+
+        <section>
+          <h3>
+            <a href="https://basketmania.com.ua/blog/Jordan-Brand-Istoriya-misiya-propozytsiya" target="_blank">
+              Взуття Jordan
+            </a>
+          </h3>
+          <img src="/images/6.jpg" width="280" height="200" alt="Jordan" />
+          <p>
+            Варто відзначити, що взуття лінійки Jordan створювали застосовуючи найкращі технологічні можливості
+            компанії.
+          </p>
+          <video width="540" height="380" controls poster="/images/4.jpg">
+            <source src="/video3.mp4" type="video/mp4" />
+          </video>
+        </section>
+
+        <section>
+          <h3><a href="https://us.puma.com/us/en/lamelo-ball" target="_blank">Взуття Puma</a></h3>
+          <img src="/images/7.jpg" width="280" height="200" alt="Puma" />
+          <p>
+            За м'якість та чуйність відповідає технологія Nitro Foam. Кругові пунктирні лінії на передній частині
+            підмітки та ромбики на задній відмінно чіпляють будь-яке покриття.
+          </p>
+        </section>
+
+        <footer>
+          <p>Copyright 2025</p>
+          <ul className="social-icons">
+            <li>
+              <a className="social-icon-instagram" href="https://www.instagram.com/_dqpqpb_/" target="_blank"></a>
+            </li>
+            <li>
+              <a className="social-icon-tiktok" href="https://www.tiktok.com/@gxxx0lb" target="_blank"></a>
+            </li>
+            <li>
+              <a className="social-icon-telegram" href="https://t.me/dbdqpbdb" target="_blank"></a>
+            </li>
+            <li>
+              <a className="social-icon-youtube" href="https://www.youtube.com/channel/UCd9QWUQneBlbqUVMIkCkltA" target="_blank"></a>
+            </li>
+          </ul>
+        </footer>
+
+        <section id="contact">
+          <form action="#contact" method="post">
+            <input type="text" name="contact_name" placeholder="Name" required />
+            <input type="email" name="contact_email" placeholder="Email" required />
+            <textarea name="contact_message" placeholder="Message" rows={6} required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
